@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "name": "Birgitte Kirk Iversen",
+        "initials": "bki",
+        "mail": "bki@eaaa.dk",
+        "phone": "72286316",
+        "address": "Sønderhøj 30, 8260 Viby J",
+        "position": "Senior Lecturer",
+        "department": "Programmes within Digital Communication and Multimedia",
+        "image": "https://www.baaa.dk/media/u4gorzsd/birgitte-kirk-iversen2.jpg?anchor=center&mode=crop&width=800&height=450&rnd=132792921541630000&format=webp"
+    },
+    {
+        "id": 2,
+        "name": "Maria Louise Bendixen",
+        "initials": "mlbe",
+        "mail": "mlbe@eaaa.dk",
+        "phone": "72286345",
+        "address": "Ringvej Syd 104, 8260 Viby J",
+        "position": "Senior Lecturer",
+        "department": "Programmes within Digital Communication and Multimedia",
+        "image": "https://www.baaa.dk/media/b5ahrlra/maria-louise-bendixen.jpg?anchor=center&mode=crop&width=800&height=450&rnd=132792921650330000&format=webp"
+    },
+    {
+        "id": 3,
+        "name": "Kim Elkjær Marcher-Jepsen",
+        "initials": "kije",
+        "mail": "kije@eaaa.dk",
+        "phone": "7228 6325",
+        "address": "Ringvej Syd 104, 8260 Viby J",
+        "position": "Senior Lecturer",
+        "department": "Programmes within Digital Communication and Multimedia",
+        "image": "https://www.baaa.dk/media/3zihz21l/kim-elkjaer-marcher-jepsen.jpg?anchor=center&mode=crop&width=800&height=450&rnd=132792921620830000&format=webp"
+    },
+    {
+        "id": 4,
+        "name": "Rasmus Cederdorff",
+        "initials": "race",
+        "mail": "race@eaaa.dk",
+        "phone": "72286318",
+        "address": "Ringvej Syd 104, 8260 Viby J",
+        "position": "Senior Lecturer",
+        "department": "Programmes within Digital Communication and Multimedia",
+        "image": "https://www.baaa.dk/media/devlvvgj/rasmus-cederdorff.jpg?anchor=center&mode=crop&width=800&height=450&rnd=132792921695570000&format=webp"
+    },
+    {
+        "id": 5,
+        "name": "Dan Okkels Brendstrup",
+        "initials": "dob",
+        "mail": "dob@eaaa.dk",
+        "phone": "72286327",
+        "address": "Ringvej Syd 104, 8260 Viby J",
+        "position": "Lecturer",
+        "department": "Programmes within Digital Communication and Multimedia",
+        "image": "https://www.eaaa.dk/media/bdojel41/dan-okkels-brendstrup.jpg?anchor=center&mode=crop&width=800&height=450&rnd=132792921559630000&format=webp"
+    }
+]
