@@ -25,7 +25,6 @@ export default function Update() {
 
     async function saveUser(userObject) {
         setShowLoader(true);
-        console.log(userObject);
         const docRef = doc(usersRef, userId);
         await updateDoc(docRef, userObject);
         navigate("/");
