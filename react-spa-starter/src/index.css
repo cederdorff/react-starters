@@ -40,6 +40,7 @@ nav a {
     text-decoration: none;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 /* Change the color of links on hover */
