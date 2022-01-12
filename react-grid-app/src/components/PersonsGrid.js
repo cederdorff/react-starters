@@ -11,6 +11,11 @@ const personData = [
 
 export default function PersonsGrid() {
     const [persons, setPersons] = React.useState(personData);
+
+    function create(user) {
+        setPersons([...persons, user]); // add new person
+    }
+
     return (
         <>
             <section className="grid-container">
@@ -18,7 +23,7 @@ export default function PersonsGrid() {
                     <Person key={person.name} person={person} />
                 ))}
             </section>
-            <PersonCreate persons={persons} setPersons={setPersons} />
+            <PersonCreate onCreate={create} />
         </>
     );
 }
