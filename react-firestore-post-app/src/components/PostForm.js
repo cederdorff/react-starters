@@ -7,7 +7,6 @@ export default function PostForm({ post, handleSubmit }) {
 
     useEffect(() => {
         if (post) {
-            console.log(post);
             setFormData(post);
         } else {
             setFormData({ title: "", body: "", image: "" });
