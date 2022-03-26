@@ -1,45 +1,50 @@
-import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { postsRef } from "../firebase-config";
-import { getDoc, updateDoc, doc, deleteDoc } from "@firebase/firestore";
+import { doc, getDoc, updateDoc, deleteDoc } from "@firebase/firestore";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import PostForm from "../components/PostForm";
+import { postsRef } from "../firebase-config";
 
 export default function UpdatePage() {
-    const [post, setPost] = useState({ title: "", body: "", image: "" });
-    const params = useParams();
+    const params = useParams(); // url parameter
+    const postId = params.postId; // get post id from url parameter
+    const [post, setPost] = useState({});
     const navigate = useNavigate();
-    const postId = params.postId;
 
     useEffect(() => {
-        async function getUser() {
-            const docRef = doc(postsRef, postId);
-
-            const docSnap = await getDoc(docRef);
-            setPost(docSnap.data());
+        async function getPost() {
+            console.log(postId);
+            const docRef = doc(postsRef, postId); // create post ref based on postId from url parameter
+            const docData = await getDoc(docRef); // get post data (one specific post)
+            setPost(docData.data()); // setting post state with data from firestore
         }
 
-        getUser();
-    }, [postId]);
+        getPost();
+    }, [postId]); // called every time postId changes
 
-    async function savePost(postToUpdate) {
-        const docRef = doc(postsRef, postId);
-        await updateDoc(docRef, postToUpdate);
+    /**
+     * handleSubmit updates and existing post based on a postId
+     * handleSubmit is called by the PostForm component
+     */
+    async function handleSubmit(postToUpdate) {
+        const docRef = doc(postsRef, postId); // create post ref based on postId
+        await updateDoc(docRef, postToUpdate); // update post using the docRef and postToUpdate object (coming from PostForm)
         navigate("/");
     }
 
     async function deletePost() {
-        const confirmDelete = window.confirm(`Do you want to delete post, ${post.title}?`);
+        const confirmDelete = window.confirm(`Do you want to delete post, ${post.title}?`); // show confirm delete dialog
         if (confirmDelete) {
-            const docRef = doc(postsRef, postId);
-            await deleteDoc(docRef);
+            // if user click "OK" then delete post
+            const docRef = doc(postsRef, postId); // create post ref based on postId
+            await deleteDoc(docRef); // delete doc
             navigate("/");
         }
     }
 
     return (
         <section className="page">
-            <h1>Update Post</h1>
-            <PostForm post={post} handleSubmit={savePost} />
+            <h1>Update Page</h1>
+            <PostForm savePost={handleSubmit} post={post} />
             <button className="btn-outline" onClick={deletePost}>
                 Delete Post
             </button>

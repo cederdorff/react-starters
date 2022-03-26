@@ -4,6 +4,9 @@ import UserAvatar from "./UserAvatar";
 export default function PostCard({ post }) {
     const navigate = useNavigate();
 
+    /**
+     * handleClick is called when user clicks on the Article (PostCard)
+     */
     function handleClick() {
         navigate(`posts/${post.id}`);
     }

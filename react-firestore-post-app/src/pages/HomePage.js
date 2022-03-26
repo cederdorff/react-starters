@@ -10,11 +10,12 @@ export default function HomePage() {
         const q = query(postsRef, orderBy("createdAt", "desc")); // order by: lastest post first
         const unsubscribe = onSnapshot(q, data => {
             const postsData = data.docs.map(doc => {
-                return { ...doc.data(), id: doc.id };
+                // map through all docs (object) from post collection
+                return { ...doc.data(), id: doc.id }; // changing the data structure so it's all gathered in one object
             });
             setPosts(postsData);
         });
-        return () => unsubscribe();
+        return () => unsubscribe(); // tell the post component to unsubscribe from listen on changes from firestore
     }, []);
 
     return (
