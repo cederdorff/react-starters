@@ -47,6 +47,10 @@ a {
     color: var(--green);
 }
 
+img {
+    width: 100%;
+}
+
 .page {
     background-color: var(--light-green);
     min-height: calc(100vh - 58px - 2em);
@@ -207,7 +211,9 @@ button.btn-outline {
     padding: 2.032em 1em;
 }
 
-input {
+input,
+select,
+.selected-posts {
     margin: 1em auto;
     width: 100%;
     max-width: 350px;
@@ -230,6 +236,12 @@ input {
 
 form .file-input {
     display: none;
+}
+
+.selected-posts article {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 1em;
 }
 
 /* ---------- loader styling ---------- */
@@ -291,4 +303,18 @@ article .avatar img {
     height: 50px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.add-posts {
+    background-color: var(--light-green);
+    padding: 1em 2em 2em;
+    margin: 2em 0;
+}
+
+.fav-page .grid-container > article {
+    text-align: left;
+}
+
+.fav-page button {
+    margin: 0 auto 2em;
 }
