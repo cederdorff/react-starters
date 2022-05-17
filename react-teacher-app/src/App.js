@@ -2,7 +2,7 @@ import TeacherList from "./Components/TeacherList";
 
 function App() {
     return (
-        <main>
+        <main className="page">
             <header>
                 <h1>Teachers</h1>
             </header>

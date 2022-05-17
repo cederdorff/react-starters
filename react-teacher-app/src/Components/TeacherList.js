@@ -13,22 +13,15 @@ export default function TeacherList() {
 
     function search(searchValue) {
         const result = teachers.filter(
-            teacher =>
-                teacher.name.toLowerCase().includes(searchValue.toLowerCase()) ||
-                teacher.initials.toLowerCase().includes(searchValue.toLowerCase())
+            teacher => teacher.name.toLowerCase().includes(searchValue.toLowerCase()) || teacher.initials.toLowerCase().includes(searchValue.toLowerCase())
         );
         setFilteredResults(result);
     }
 
     return (
         <section>
-            <input
-                type="search"
-                placeholder="Search"
-                className="searchBar"
-                onKeyUp={event => search(event.target.value)}
-            />
-            <section className="grid">
+            <input type="search" placeholder="Search" className="searchBar" onKeyUp={event => search(event.target.value)} />
+            <section className="grid-container">
                 {filteredResults.map(teacher => (
                     <TearcherCard teacher={teacher} key={teacher.id} />
                 ))}
