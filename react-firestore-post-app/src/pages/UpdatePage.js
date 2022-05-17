@@ -43,7 +43,7 @@ export default function UpdatePage() {
 
     return (
         <section className="page">
-            <h1>Update Page</h1>
+            <h1 className="text-center">Update Page</h1>
             <PostForm savePost={handleSubmit} post={post} />
             <button className="btn-outline" onClick={deletePost}>
                 Delete Post
