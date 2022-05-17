@@ -10,7 +10,7 @@ export default function UserItem({ user }) {
     return (
         <article onClick={handleClick}>
             <img src={user.img} alt={user.name} />
-            <h3>{user.name}</h3>
+            <h2>{user.name}</h2>
             <p>
                 <a href={`mailto:${user.mail}`}>{user.mail}</a>
             </p>
