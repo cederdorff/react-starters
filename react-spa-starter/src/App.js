@@ -6,13 +6,13 @@ import Nav from "./components/Nav";
 
 function App() {
     return (
-        <div className="App">
+        <main className="App">
             <Nav />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="about" element={<About />} />
             </Routes>
-        </div>
+        </main>
     );
 }
 
