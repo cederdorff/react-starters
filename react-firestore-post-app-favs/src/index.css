@@ -47,10 +47,6 @@ a {
     color: var(--green);
 }
 
-img {
-    width: 100%;
-}
-
 .page {
     background-color: var(--light-green);
     min-height: calc(100vh - 58px - 2em);
@@ -144,12 +140,15 @@ nav a.active {
 
 .grid-container > article {
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
-    text-align: center;
     padding: 1.5em;
     background-color: var(--white);
     transition: 0.5s;
     animation: fadeIn 0.5s;
     cursor: pointer;
+}
+
+.grid-container > article ::first-letter {
+    text-transform: uppercase;
 }
 
 .grid-container > article:hover {
@@ -211,9 +210,7 @@ button.btn-outline {
     padding: 2.032em 1em;
 }
 
-input,
-select,
-.selected-posts {
+input {
     margin: 1em auto;
     width: 100%;
     max-width: 350px;
@@ -236,12 +233,6 @@ select,
 
 form .file-input {
     display: none;
-}
-
-.selected-posts article {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    gap: 1em;
 }
 
 /* ---------- loader styling ---------- */
@@ -303,18 +294,4 @@ article .avatar img {
     height: 50px;
     object-fit: cover;
     border-radius: 50%;
-}
-
-.add-posts {
-    background-color: var(--light-green);
-    padding: 1em 2em 2em;
-    margin: 2em 0;
-}
-
-.fav-page .grid-container > article {
-    text-align: left;
-}
-
-.fav-page button {
-    margin: 0 auto 2em;
 }

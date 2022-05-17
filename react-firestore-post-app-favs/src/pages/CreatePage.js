@@ -16,7 +16,7 @@ export default function CreatePage({ showLoader }) {
     }
     return (
         <section className="page">
-            <h1>Create New Post</h1>
+            <h1 className="text-center">Create New Post</h1>
             <PostForm savePost={createPost} />
         </section>
     );

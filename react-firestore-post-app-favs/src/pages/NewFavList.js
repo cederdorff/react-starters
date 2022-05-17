@@ -53,7 +53,7 @@ export default function NewFavList() {
 
     return (
         <section className="page">
-            <h1>Add New Fav List</h1>
+            <h1 className="text-center">Add New Fav List</h1>
             <form onSubmit={handleSubmit}>
                 <label>
                     Name

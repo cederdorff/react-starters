@@ -24,7 +24,7 @@ export default function FavoritePage() {
     }
     return (
         <section className="page fav-page">
-            <h1>Fav Page</h1>
+            <h1 className="text-center">Fav Page</h1>
             <button onClick={goToNewFavList}>Add new list</button>
 
             <section className="grid-container">
