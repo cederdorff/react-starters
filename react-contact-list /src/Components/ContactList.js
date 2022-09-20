@@ -19,7 +19,7 @@ const contacts = [
         isFavorite: true
     },
     {
-        id: 2,
+        id: 3,
         name: "Hanne Hansen",
         mail: "hanne@hansen.com",
         phone: "+45 8844 9966",
